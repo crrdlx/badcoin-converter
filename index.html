@@ -114,19 +114,19 @@ input[type=number]{
 <tbody>
 <tr>
 <td>
-<input type="number" onkeyup="BTCconvert()" value="" name="BTC" size="12"> &#x30B7 Grin<small></small></td>
+<input type="number" onkeyup="BTCconvert()" value="" name="BTC" size="12"> BAD<small></small></td>
 </tr>
 <tr>
 <td>
-<input type="number" onkeyup="mBTCconvert()" value="" name="mBTC" width="12"> mGrin - <small>milliGrin</small></td>
+<input type="number" onkeyup="mBTCconvert()" value="" name="mBTC" width="12"> mBAD - <small>milliBAD</small></td>
 </tr>
 <tr>
 <td>
-<input type="number" onkeyup="uBTCconvert()" value="" name="uBTC" size="12"> &#956;Grin - <small>microGrin</small></td>
+<input type="number" onkeyup="uBTCconvert()" value="" name="uBTC" size="12"> &#956;BAD - <small>microBAD</small></td>
 </tr>
 <tr>
 <td>
-<input type="number" onkeyup="satoshiconvert()" value="" name="satoshi" size="12"> Igno - <small>nanoGrin</small></td>
+<input type="number" onkeyup="satoshiconvert()" value="" name="satoshi" size="12"> BADtoshi - <small>nanoBAD</small></td>
 </tr>
 <tr>
 <td><input type="number" onkeyup="LiveConvert()" value="$" name="LiveConvert" size="12"> &#8776; USD <small>at pageload</small></td>
@@ -136,8 +136,8 @@ input[type=number]{
 <p align="left">
 
 <small><small>
-GRIN &#8594; USD conversion | <a href="FiatToGRIN/USDtoGRIN.htm">USD &#8594; GRIN conversion</a><br>
-Approximate value of one Grin at time of pageload (in USD):</small></small>
+BAD &#8594; USD conversion | <a href="FiatToGRIN/USDtoGRIN.htm">USD &#8594; BAD conversion</a><br>
+Approximate value of one BAD at time of pageload (in USD):</small></small>
 <center>
 <big>
 <div id="BTCPrice"/>Loading current price...</div>
@@ -160,8 +160,8 @@ Approximate value of one Grin at time of pageload (in USD):</small></small>
 </br>
 </small></small>
 <script language="JavaScript">
-  $.getJSON("https://api.coingecko.com/api/v3/simple/price?ids=grin&vs_currencies=usd", function(data){
-            $("#BTCPrice").text(data["usd"].toFixed(2));
+  $.getJSON("https://api.coingecko.com/api/v3/simple/price?ids=badcoin&vs_currencies=usd", function(data){
+            $("#BTCPrice").text(data["badcoin"]["usd"].toFixed(8));
         }).fail(function( dat, textStatus, error ) {
                     var err = textStatus + ", " + error;
                     alert(err);
@@ -220,14 +220,14 @@ LiveConvert.value = (CurrentPrice.innerHTML);
 ONMOUSEOVER="window.status='Refresh'; return true"
 ONMOUSEOUT="window.status='ah... that was good'">
 <center><img src="refresh.png" 
-width="50" height="" border="0" /></a></center>
+width="80" height="" border="0" /></a></center>
 </p>
 
 <small><small>
-<a href="about.htm">About</a> | <a href="http://br549.mywebcommunity.org/grin/dev_notes.html">Developer Notes</a> | <a href="privacy.htm">Privacy Policy</a> | Exchange rates powered by <a href="https://www.cryptocompare.com/api" target="_blank">CryptoCompare</a><br>
+<a href="about.htm">About</a> | <a href="http://br549.mywebcommunity.org/grin/dev_notes.html">Developer Notes</a> | <a href="privacy.htm">Privacy Policy</a> | Exchange rates powered by <a href="https://www.coingecko.com/en/api" target="_blank">CoinGecko</a><br>
 </small></small>
 <p>
-  <center><img src="grinlogo.svg" border="0" width=30></center>
+  <center><img src="badcoin.png" border="0" width=40></center>
 
 <!-- Start of Default Statcounter code for Grin Converter
 http://www.br549.mywebcommunity.org/grin -->
