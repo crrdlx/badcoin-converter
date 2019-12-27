@@ -1,6 +1,6 @@
 # Grintroduction
 
-**The low-down on Grin coin, for real people who aren't geniuses.**
+**The low-down on Grin coin, for real people who aren't geniuses.** 
 
 **TL;DR**: *Grin is different. It is fair, it is private, and it aims to be more fungible than non-privacy cryptocurrencies. The emission schedule and the inflation rate are predictable, but whether they are ideal is yet to be determined.*
 
