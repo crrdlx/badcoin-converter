@@ -1,24 +1,9 @@
 <html><head>
-<!-- Begin Firebase code for Google Analytics -->
-<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBA1xZ_cNVQxCTEwVDhJJOtlCHRBhNcDeA",
-    authDomain: "grin-converter.firebaseapp.com",
-    databaseURL: "https://grin-converter.firebaseio.com",
-    projectId: "grin-converter",
-    storageBucket: "grin-converter.appspot.com",
-    messagingSenderId: "505998847832"
-  };
-  firebase.initializeApp(config);
-</script>
-<!-- End Firebase code for Google Analytics -->
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <meta content="text/html" http-equiv="content-type">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>Grin Converter GRIN-CAD</title>
+  <title>BADcoin Converter BAD-CAD</title>
   <style type="text/css">
     DIV.ETHannouncement {text-align: center }
     </style>
@@ -121,7 +106,7 @@
       <br>
       <center>
       <div class="w3-container">
-        <a href="index.html" class="w3-button w3-round-large w3-yellow">   &#x30B7   Grin Converter   </a>
+        <a href="index.html" class="w3-button w3-round-large w3-red">   BADcoin Converter   </a>
       </div>
       </center>
       <small>Enter a number.<br></small>
@@ -130,19 +115,19 @@
       <tbody>
       <tr>
       <td>
-      <input type="number" onkeyup="BTCconvert()" value="" name="BTC" size="12"> &#x30B7 Grin<small></small></td>
+      <input type="number" onkeyup="BTCconvert()" value="" name="BTC" size="12"> BAD<small></small></td>
       </tr>
       <tr>
       <td>
-      <input type="number" onkeyup="mBTCconvert()" value="" name="mBTC" width="12"> mGrin - <small>milliGrin</small></td>
+      <input type="number" onkeyup="mBTCconvert()" value="" name="mBTC" width="12"> mBAD - <small>milliBAD</small></td>
       </tr>
       <tr>
       <td>
-      <input type="number" onkeyup="uBTCconvert()" value="" name="uBTC" size="12"> &#956;Grin - <small>microGrin</small></td>
+      <input type="number" onkeyup="uBTCconvert()" value="" name="uBTC" size="12"> &#956;BAD - <small>microBAD</small></td>
       </tr>
       <tr>
       <td>
-      <input type="number" onkeyup="satoshiconvert()" value="" name="satoshi" size="12"> Igno - <small>nanoGrin</small></td>
+      <input type="number" onkeyup="satoshiconvert()" value="" name="satoshi" size="12"> BADtoshi - <small>nanoBAD</small></td>
       </tr>
       <tr>
       <td><input type="number" onkeyup="LiveConvert()" value="$" name="LiveConvert" size="12"> &#8776; CAD <small>at pageload</small></td>
@@ -152,8 +137,8 @@
       <p align="left">
       
       <small><small>
-  GRIN &#8594; CAD conversion | <a href="FiatToGRIN/CADtoGRIN.htm">CAD &#8594; GRIN conversion</a><br>
-  Approximate value of one Grin at time of pageload (in CAD):</small></small>
+  BAD &#8594; CAD conversion | <a href="FiatToBAD/CADtoBAD.htm">CAD &#8594; BAD conversion</a><br>
+  Approximate value of one BAD at time of pageload (in CAD):</small></small>
   <center>
   <big>
   <div id="BTCPrice"/>Loading current price...</div>
@@ -177,8 +162,8 @@
   </small></small>
   
   <script language="JavaScript">
-    $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=GRIN&tsyms=CAD", function(data){
-              $("#BTCPrice").text(data["CAD"].toFixed(2));
+    $.getJSON("https://api.coingecko.com/api/v3/simple/price?ids=badcoin&vs_currencies=cad", function(data){
+              $("#BTCPrice").text(data["badcoin"]["cad"].toFixed(8));
           }).fail(function( dat, textStatus, error ) {
                       var err = textStatus + ", " + error;
                       alert(err);
@@ -237,31 +222,15 @@
     ONMOUSEOVER="window.status='Refresh'; return true"
     ONMOUSEOUT="window.status='ah... that was good'">
     <center><img src="refresh.png" 
-    width="60" height="" border="0" /></a></center>
+    width="80" height="" border="0" /></a></center>
     </p>
     
     <small><small>
-    <a href="about.htm">About</a> | <a href="http://br549.mywebcommunity.org/grin/dev_notes.html">Developer Notes</a> | <a href="privacy.htm">Privacy Policy</a> | Exchange rates powered by <a href="https://www.cryptocompare.com/api" target="_blank">CryptoCompare</a><br>
+    <a href="about.htm">About</a> | <a href="http://br549.mywebcommunity.org/BAD/dev_notes.html">Developer Notes</a> | <a href="privacy.htm">Privacy Policy</a> | Exchange rates powered by <a href="https://www.coingecko.com/en/api" target="_blank">CoinGecko</a><br>
     </small></small>
     <p>
-      <center><img src="grinlogo.svg" border="0" width=30></center>
+      <center><img src="badcoin.png" border="0" width=40></center>
     
-    <!-- Start of Default Statcounter code for Grin Converter
-    http://www.br549.mywebcommunity.org/grin -->
-    <script type="text/javascript">
-      var sc_project=11959922; 
-      var sc_invisible=1; 
-      var sc_security="bf7ace1f"; 
-      </script>
-      <script type="text/javascript"
-      src="https://www.statcounter.com/counter/counter.js"
-      async></script>
-      <noscript><div class="statcounter"><a title="Web Analytics"
-      href="https://statcounter.com/" target="_blank"><img
-      class="statcounter"
-      src="https://c.statcounter.com/11959922/0/bf7ace1f/1/"
-      alt="Web Analytics"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide -->
 
     </body>
     </html>
